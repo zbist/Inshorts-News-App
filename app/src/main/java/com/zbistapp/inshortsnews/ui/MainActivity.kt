@@ -1,7 +1,8 @@
-package com.zbistapp.inshortsnews
+package com.zbistapp.inshortsnews.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.zbistapp.inshortsnews.R
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
