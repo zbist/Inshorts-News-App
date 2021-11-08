@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.zbistapp.inshortsnews.R
+import com.zbistapp.inshortsnews.domain.NewsEntity
 
-class MainFragment : Fragment(R.layout.fragment_main) {
+class MainFragment : Fragment(R.layout.fragment_main), MainContract.View {
 
     companion object {
         fun newInstance() = MainFragment()
@@ -19,5 +20,13 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun setNews(listOfUsers: List<NewsEntity>) {
+
+    }
+
+    override fun setError(errorText: String) {
+
     }
 }
