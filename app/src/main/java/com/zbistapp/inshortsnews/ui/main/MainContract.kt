@@ -13,11 +13,11 @@ class MainContract {
         fun setNews(listOfUsers: List<NewsEntity>)
 
         @Skip
-        fun setError(errorText: String)
+        fun setError(errorText: String?)
     }
 
     abstract class Presenter : MvpPresenter<View>() {
         abstract fun onNewsItemClicked(user: NewsEntity)
-        abstract fun onUpdate(user: NewsEntity)
+        abstract fun onUpdate()
     }
 }
