@@ -6,4 +6,7 @@
     <dimen name="news_item_default_margin">12dp</dimen>
     <dimen name="news_item_title_text_size">20sp</dimen>
     <dimen name="news_item_date_text_size">16sp</dimen>
+    <dimen name="news_detail_title_text_size">22sp</dimen>
+    <dimen name="news_details_date_text_size">16sp</dimen>
+    <dimen name="news_details_context_text_size">20sp</dimen>
 </resources>
