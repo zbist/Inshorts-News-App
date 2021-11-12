@@ -10,14 +10,14 @@ class MainContract {
 
     interface View : MvpView {
         @AddToEndSingle
-        fun setNews(listOfUsers: List<NewsEntity>)
+        fun setNews(listOfNews: List<NewsEntity>)
 
         @Skip
         fun setError(errorText: String?)
     }
 
     abstract class Presenter : MvpPresenter<View>() {
-        abstract fun onNewsItemClicked(user: NewsEntity)
+        abstract fun onNewsItemClicked(news: NewsEntity)
         abstract fun onUpdate()
     }
 }

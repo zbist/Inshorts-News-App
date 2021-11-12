@@ -1,13 +1,16 @@
 package com.zbistapp.inshortsnews.ui.main
 
+import com.github.terrakok.cicerone.Router
 import com.zbistapp.inshortsnews.domain.INewsRepo
 import com.zbistapp.inshortsnews.domain.NewsEntity
+import com.zbistapp.inshortsnews.utils.Screens
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.schedulers.Schedulers
 
 class MainPresenter(
+    private val router: Router,
     private val repository: INewsRepo
 ) : MainContract.Presenter() {
 
@@ -26,8 +29,8 @@ class MainPresenter(
             })
     }
 
-    override fun onNewsItemClicked(user: NewsEntity) {
-
+    override fun onNewsItemClicked(news: NewsEntity) {
+        router.navigateTo(Screens.newsDetailsScreen(news))
     }
 
     override fun onUpdate() {
