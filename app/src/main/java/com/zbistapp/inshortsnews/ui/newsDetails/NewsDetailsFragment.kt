@@ -49,7 +49,7 @@ class NewsDetailsFragment : Fragment(R.layout.fragment_news_details) {
             authorTextView.text = news.author
             dateTextView.text = news.date
             contentTextView.text = news.content
-            readMoreTextView.append(news.readMoreUrl)
+            readMoreTextView.text = news.readMoreUrl
         }
     }
 }

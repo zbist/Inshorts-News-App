@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:gravity="start"
+            android:textColor="@color/black"
             android:textSize="@dimen/news_detail_title_text_size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -73,14 +74,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:autoLink="web"
-            android:lines="1"
             android:linksClickable="true"
             android:textColor="@color/black"
             android:textSize="@dimen/news_details_date_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/content_text_view"
-            tools:text="@string/read_more_text" />
+            app:layout_constraintTop_toBottomOf="@id/content_text_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -5,11 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.github.terrakok.cicerone.Cicerone
-import com.github.terrakok.cicerone.androidx.AppNavigator
 import com.zbistapp.inshortsnews.App
 import com.zbistapp.inshortsnews.R
-import com.zbistapp.inshortsnews.data.MockNewsRepoImpl
 import com.zbistapp.inshortsnews.databinding.FragmentMainBinding
 import com.zbistapp.inshortsnews.domain.NewsEntity
 import moxy.MvpAppCompatFragment
@@ -62,10 +59,5 @@ class MainFragment : MvpAppCompatFragment(R.layout.fragment_main), MainContract.
     override fun setError(errorText: String?) {
         Toast.makeText(context, errorText, Toast.LENGTH_SHORT).show()
         binding.swipeRefreshLayout.isRefreshing = false
-    }
-
-    override fun onDestroy() {
-        binding.newsRecyclerView.adapter = null
-        super.onDestroy()
     }
 }
