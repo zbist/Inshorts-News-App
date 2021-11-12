@@ -55,6 +55,7 @@ class MainFragment : MvpAppCompatFragment(R.layout.fragment_main), MainContract.
 
     override fun setError(errorText: String?) {
         Toast.makeText(context, errorText, Toast.LENGTH_SHORT).show()
+        binding.swipeRefreshLayout.isRefreshing = false
     }
 
     override fun onDestroyView() {
